@@ -1,0 +1,33 @@
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+#container {
+  display: flex;
+  height: 100vh;
+  margin: 0;
+}
+
+.signin {
+  flex: 1;
+  border: 1px solid red;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.signin > input {
+  border-radius: 5px;
+  margin: 20px;
+  width: 40%;
+  height: 3em;
+}
+
+.signin > button {
+  margin: 20px;
+  width: 40%;
+  height: 3em;
+  border-radius: 4em;
+}

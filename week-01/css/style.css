@@ -1,6 +1,7 @@
 body {
   margin: 0;
   font-family: 'Roboto', sans-serif;
+  --main-bg-color: #db7500; 
 }
 
 #container {
@@ -9,25 +10,83 @@ body {
   margin: 0;
 }
 
-.signin {
+.hidden {
+  display: none !important; 
+}
+
+.signin, .signup {
   flex: 1;
-  border: 1px solid red;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.signin > input {
+.alt-signin {
+  display: flex; 
+  justify-content: space-around; 
+  width: 40%;
+}
+
+.social {
+  height: 3em; 
+  width: 3em; 
+  border-radius: 50%; 
+  border: 2px solid var(--main-bg-color); 
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  margin: 20px; 
+}
+
+.signin > h1, .signup > h1 {
+  color: var(--main-bg-color); 
+  text-shadow: 1px 1px #bababa;
+  font-size: 3em; 
+}
+
+.signin > input, .signup > input {
   border-radius: 5px;
   margin: 20px;
   width: 40%;
-  height: 3em;
+  height: 4em;
+  background: #ededed; 
+  border: 1px solid #bababa; 
 }
 
-.signin > button {
+::placeholder {
+  font-size: 1.5em; 
+  opacity: 0.5;
+  text-indent: 1em; 
+}
+
+.signin > button, .signup > button {
   margin: 20px;
-  width: 40%;
+  width: 30%;
   height: 3em;
   border-radius: 4em;
+  font-size: 1em; 
+  font-weight: 500; 
+  background: var(--main-bg-color); 
+  color: white; 
 }
+
+.signin > p, .signup > p {
+  width: 40%; 
+  text-align: center; 
+  font-weight: 300; 
+  font-size: 1em; 
+  margin: 20px; 
+}
+
+.overlay {
+  background: var(--main-bg-color); 
+  color: white;  
+}
+
+.overlay > h1 {
+  color: white; 
+}
+
+
+

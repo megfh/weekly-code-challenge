@@ -12,6 +12,10 @@ function signUp(e) {
   signinOverlay.classList.remove("hidden"); 
   signupForm.classList.remove("hidden"); 
   signupOverlay.classList.add("hidden"); 
+  console.log("animating");
+  
+  // signinForm.classList.add("animateSignInForm"); 
+  // signupOverlay.classList.add("animateSignUpOverlay"); 
 }
 
 function signIn(e) {

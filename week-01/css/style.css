@@ -5,7 +5,6 @@ body {
 }
 
 #container {
-  display: flex;
   height: 100vh;
   margin: 0;
 }
@@ -14,12 +13,24 @@ body {
   display: none !important; 
 }
 
-.signin, .signup {
-  flex: 1;
+.signin {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 50vw; 
+  height: 100vh; 
+  float: left; 
+}
+
+.signup {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50vw; 
+  height: 100vh;
+  float: right; 
 }
 
 .alt-signin {
@@ -86,6 +97,32 @@ body {
 
 .overlay > h1 {
   color: white; 
+}
+
+@keyframes signInForm {
+  0% {
+    float: left;  
+  }
+  100% {
+    float: right; 
+  }
+}
+
+@keyframes signUpOverlay {
+  0% {
+    float: right;  
+  }
+  100% {
+    float: left; 
+  }
+}
+
+.animateSignInForm {
+  animation: signInForm 2s; 
+}
+
+.animateSignUpOverlay {
+  animation: signUpOverlay 2s; 
 }
 
 

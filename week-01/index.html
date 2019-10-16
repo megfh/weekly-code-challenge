@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sign In/Sign Up</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,500&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/1b5ec31622.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div id="container">
+      <div class="form-container">
+        <form class="form" id="signinForm">
+          <h1>Sign In</h1>
+          <div class="alt-signin">
+            <div class="social"><i class="fab fa-facebook-f fa-lg"></i></div>
+            <div class="social"><i class="fab fa-google fa-lg"></i></div>
+            <div class="social"><i class="fab fa-linkedin-in fa-lg"></i></div>
+          </div>
+          <input type="text" placeholder="email">
+          <input type="text" placeholder="password">
+          <a href="">Forgot Password?</a>
+          <button>SIGN IN</button>
+        </form>
+        <form class="form hidden" id="signupForm">
+          <h1>Create Account</h1>
+          <div class="alt-signin">
+            <div class="social"><i class="fab fa-facebook-f fa-lg"></i></div>
+            <div class="social"><i class="fab fa-google fa-lg"></i></div>
+            <div class="social"><i class="fab fa-linkedin-in fa-lg"></i></div>
+          </div>
+          <input type="text" placeholder="name">
+          <input type="text" placeholder="email">
+          <input type="text" placeholder="password">
+          <button>SIGN UP</button>
+        </form>
+      </div>
+      <div class="overlay-container">
+        <div class="overlay" id="signupOverlay">
+          <h1>Hello, Friend!</h1>
+          <p>New around here? Let's get you started with a new account</p>
+          <button>SIGN UP</button>
+        </div>
+        <div class="overlay hidden" id="signinOverlay">
+          <h1>Welcome Back!</h1>
+          <p>We missed you! Let's get you signed in</p>
+          <button>SIGN IN</button>
+        </div>
+      </div>
+    </div>
+    <script src="js/main.js"></script>
+  </body>
+</html>

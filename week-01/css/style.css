@@ -1,0 +1,175 @@
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  --main-bg-color: linear-gradient(to right, #16222a, #3a6073);
+  --main-color: #3a6073; 
+}
+
+#container {
+  height: 100vh;
+  margin: 0;
+}
+
+.hidden {
+  display: none !important; 
+}
+
+.form-container {
+  width: 50%; 
+  height: 100vh; 
+  position: absolute;
+  left: 0;
+  background: white;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%; 
+  height: 100%; 
+  position: absolute;
+  left: 0;
+}
+
+form > h1 {
+  color: var(--main-color); 
+  text-shadow: 1px 1px #bababa;
+  font-size: 3em; 
+}
+
+.overlay-container {
+  width: 50%; 
+  height: 100vh;
+  position: absolute;
+  right: 0; 
+  background: var(--main-bg-color); 
+  color: white;  
+}
+
+.overlay {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%; 
+  height: 100%;
+  position: absolute;
+  right: 0; 
+}
+
+.overlay > h1 {
+  color: white; 
+  text-shadow: 1px 1px #bababa;
+  font-size: 3em; 
+}
+
+.alt-signin {
+  display: flex; 
+  justify-content: space-around; 
+  width: 40%;
+}
+
+.social {
+  height: 3em; 
+  width: 3em; 
+  border-radius: 50%; 
+  border: 2px solid var(--main-color); 
+  color: var(--main-color);
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  margin: 20px; 
+}
+
+form > input, .overlay > input {
+  border-radius: 5px;
+  margin: 20px;
+  width: 40%;
+  min-height: 4em;
+  background: #ededed; 
+  border: 1px solid white; 
+}
+
+::placeholder {
+  font-size: 1.5em; 
+  opacity: 0.5;
+  text-indent: 1em; 
+}
+
+form > button, .overlay > button {
+  margin: 20px;
+  width: 30%;
+  min-height: 3em;
+  border-radius: 4em;
+  border: 0.5px solid white;
+  font-size: 1em; 
+  font-weight: bold; 
+  background: var(--main-bg-color); 
+  color: white; 
+}
+
+form > p, .overlay > p {
+  width: 40%; 
+  text-align: center; 
+  font-weight: 300; 
+  font-size: 1.1em; 
+  margin: 20px; 
+}
+
+.move-right {
+  transform: translateX(100%);
+  transition-property: transform;
+  transition-duration: 1.25s;
+}
+
+.move-left {
+  transform: translateX(-100%);
+  transition-property: transform;
+  transition-duration: 1.25s;
+}
+
+.return-left {
+  transform: translateX(0);
+  transition-property: transform;
+  transition-duration: 1.25s;
+}
+
+.return-right {
+  transform: translateX(0);
+  transition-property: transform;
+  transition-duration: 1.25s;
+}
+
+.show {
+  animation: show 1.25s;
+  animation-fill-mode: forwards; 
+}
+
+.hide {
+  animation: hide 1.25s; 
+  animation-fill-mode: forwards; 
+}
+
+@keyframes show {
+  0%, 50% {
+    opacity: 0;
+    z-index: -1;
+  }
+  100% {
+    opacity: 1;
+    z-index: 5;
+  }
+}
+
+@keyframes hide {
+  0% {
+    opacity: 1;
+    z-index: 5;
+  }
+  50%, 100% {
+    opacity: 0;
+    z-index: -1;
+  }
+}

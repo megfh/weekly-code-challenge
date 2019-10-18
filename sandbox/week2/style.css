@@ -1,0 +1,29 @@
+body {
+  margin: 0;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  border: 2px solid red;
+  background: goldenrod;
+}
+
+.info {
+  height: 300px;
+  width: 300px;
+  border: 1px solid red;
+  margin-left: 100px;
+  margin-top: 100px;
+  opacity: 0;
+  background: blue;
+  color: white;
+}
+
+/* s */
+
+.info.active {
+  opacity: 1; 
+  transform: translateY(-40px);
+  transition: all 1.5s ease-in-out 0.5s;
+}

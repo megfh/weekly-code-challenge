@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/1b5ec31622.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="nav-container">
+        <div class="nav-item purple active">
+          <i class="fas fa-home"></i>
+          <p>Home</p>
+        </div>
+        <div class="nav-item green">
+          <i class="far fa-heart"></i>
+          <p>Likes</p>
+        </div>
+        <div class="nav-item coral">
+          <i class="fas fa-search"></i>
+          <p>Search</p>
+        </div>
+        <div class="nav-item blue">
+          <i class="far fa-user"></i>
+          <p>Profile</p>
+        </div>
+      </div>
+    </div>
+    <script>
+      const navItems = Array.from(document.querySelectorAll('.nav-item')); 
+
+      navItems.forEach(item => item.addEventListener('click', () => {
+      // remove active class from items 
+      navItems.forEach(tab => tab.classList.remove('active')); 
+      // add active class to clicked item 
+      item.classList.add('active'); 
+      const bgColor = getComputedStyle(item).getPropertyValue('color'); 
+      document.body.style.backgroundColor = bgColor; 
+})); 
+    </script>
+  </body>
+</html>

@@ -3,7 +3,8 @@
 body {
   margin: 0; 
   font-family: 'Lato'; 
-  --main-color: rgb(36, 131, 255); 
+  transition: background 0.2s linear;
+  background-color: rgb(70,35,122); 
 }
 
 .container {
@@ -14,13 +15,12 @@ body {
   display: flex; 
   justify-content: center; 
   align-items: center; 
-  background: var(--main-color); 
 }
 
 .nav-container {
   height: 100px;
-  width: 500px;
-  border: 1px solid blue; 
+  width: 450px;
+  border: 1px solid black; 
   display: flex; 
   align-items: center; 
   justify-content: center; 
@@ -31,13 +31,14 @@ body {
 
 .nav-item {
   flex: 1; 
-  border: 1px solid hotpink; 
   font-size: 1.25em; 
   display: flex; 
   justify-content: center; 
   padding: 10px; 
   margin: 10px; 
-  border-radius: 20px; 
+  border-radius: 50vh; 
+  cursor: pointer;
+  transition: background 0.2s linear;
 }
 
 .nav-item > p {
@@ -49,7 +50,26 @@ body {
 
 .nav-item.active {
   flex: 2; 
-  background: rgba(36, 131, 255, 0.25); 
+}
+
+.nav-item.active.purple {
+  color: rgb(70,35,122); 
+  background: rgba(70,35,122, 0.1);
+}
+
+.nav-item.active.green {
+  color: rgb(3,113,113); 
+  background: rgba(3,113,113, 0.1); 
+}
+
+.nav-item.active.coral {
+  color: rgb(241,81,86); 
+  background: rgba(241,81,86, 0.1); 
+}
+
+.nav-item.active.blue {
+  color: rgb(0,117,162); 
+  background: rgba(0,117,162, 0.1);
 }
 
 .nav-item.active > p {

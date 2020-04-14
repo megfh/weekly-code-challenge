@@ -29,7 +29,6 @@ hr {
 }
 
 .challenge-container {
-  border: 1px solid magenta; 
   width: 80%; 
   display: flex; 
   flex-wrap: wrap; 
@@ -40,8 +39,8 @@ hr {
 .challenge {
   width: 350px; 
   height: 250px; 
-  border: 1px solid green; 
-  margin: 10px; 
+  border: 1px solid black; 
+  margin: 20px; 
   display: flex; 
   flex-direction: column; 
   box-shadow: 1px 1px 1px black; 
